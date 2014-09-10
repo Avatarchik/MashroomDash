@@ -45,3 +45,7 @@ TagManager:
     userID: 1
     uniqueID: 1766847879
     locked: 0
+  - name: chara
+    userID: 2
+    uniqueID: 3689569113
+    locked: 0
