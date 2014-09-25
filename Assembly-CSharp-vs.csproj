@@ -164,6 +164,10 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITiledSprite.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\Script\GameScene\BackGround.cs" />
+     <Compile Include="Assets\Script\GameScene\GameArea.cs" />
+     <Compile Include="Assets\Script\GameScene\mashroomCreator.cs" />
+     <Compile Include="Assets\Script\GameScene\wall.cs" />
      <Compile Include="Assets\Script\TitleScene\PlayButton.cs" />
      <Compile Include="Assets\Script\common\CameraFade.cs" />
      <Compile Include="Assets\Script\common\SceneFade.cs" />
