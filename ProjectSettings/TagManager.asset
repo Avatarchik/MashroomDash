@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - Floor
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -13,11 +14,11 @@ TagManager:
   Builtin Layer 6: 
   Builtin Layer 7: 
   User Layer 8: background
-  User Layer 9: title
-  User Layer 10: button
-  User Layer 11: 
-  User Layer 12: 
-  User Layer 13: 
+  User Layer 9: ground
+  User Layer 10: title
+  User Layer 11: button
+  User Layer 12: Floor
+  User Layer 13: Player
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 
