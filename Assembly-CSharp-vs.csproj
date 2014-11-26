@@ -173,7 +173,9 @@
      <Compile Include="Assets\Script\GameScene\PointItem.cs" />
      <Compile Include="Assets\Script\GameScene\Score.cs" />
      <Compile Include="Assets\Script\GameScene\wall.cs" />
+     <Compile Include="Assets\Script\LogoScene\LogoManager.cs" />
      <Compile Include="Assets\Script\TitleScene\PlayButton.cs" />
+     <Compile Include="Assets\Script\TitleScene\TitleManager.cs" />
      <Compile Include="Assets\Script\common\CameraFade.cs" />
      <Compile Include="Assets\Script\common\ChDebug.cs" />
      <Compile Include="Assets\Script\common\SceneFade.cs" />

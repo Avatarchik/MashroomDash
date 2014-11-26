@@ -7,8 +7,11 @@ public class GameArea : MonoBehaviour {
 
     //  画面外判定
     void OnTriggerExit2D(Collider2D collider){
-        Destroy (collider.gameObject);
-
-        manager.createFloor ();
+        switch (collider.tag) {
+        case "Floor":
+            Destroy (collider.gameObject);
+            manager.createFloor ();
+            break;
+        }
     }
 }

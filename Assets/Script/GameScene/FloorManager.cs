@@ -23,11 +23,7 @@ public class FloorManager : MonoBehaviour {
         Debug.Log ("" + r.Next(100));
 
         int randomValue = r.Next (100);
-        /* if (r.Next (100) >= 97) {
-            Debug.Log ("HALL!");
-            Instantiate (hall, new Vector3 (-10.4f, -5, 0), Quaternion.identity);
 
-        } else {*/
         if (randomValue >= 10) {
             Instantiate (prefab, new Vector3 (-10, -5, 0), Quaternion.identity);
         } else {
