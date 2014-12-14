@@ -205,17 +205,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 223.999985
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 360
+    e11: 223.999985
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 223.999985
     e23: 0
     e30: 0
     e31: 0
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 811724565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00277777785, y: .00277777785, z: .00277777785}
+  m_LocalScale: {x: .00446428591, y: .00446428591, z: .00446428591}
   m_Children:
   - {fileID: 1426755912}
   m_Father: {fileID: 0}
@@ -343,45 +343,6 @@ MonoBehaviour:
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!1 &1142696847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1142696849}
-  - 114: {fileID: 1142696848}
-  m_Layer: 0
-  m_Name: Titlemanager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1142696848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1142696847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a92d1c3d96004cf597ad4220d91f7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1142696849
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1142696847}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.15064615, y: -.0399203598, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &1426755911
 GameObject:
   m_ObjectHideFlags: 0
