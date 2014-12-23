@@ -4,7 +4,8 @@
 TagManager:
   tags:
   - Floor
-  - Floormanager
+  - poisonItem
+  - pointItem
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   User Layer 11: button
   User Layer 12: Floor
   User Layer 13: Player
-  User Layer 14: 
-  User Layer 15: 
-  User Layer 16: 
+  User Layer 14: PointItem
+  User Layer 15: poisonItem
+  User Layer 16: gameArea
   User Layer 17: 
   User Layer 18: 
   User Layer 19: 

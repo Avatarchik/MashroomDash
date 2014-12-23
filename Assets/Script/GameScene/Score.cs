@@ -17,7 +17,7 @@ public class Score : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        highScore = 0;
+        highScore = PlayerPrefs.GetInt(highScoreKey);
 	}
 	
 	// Update is called once per frame

@@ -4,7 +4,11 @@ using System.Collections;
 public class ItemCreater : MonoBehaviour {
 
     //  ポイント加算アイテム
-    public GameObject addpointItem;
+    public GameObject addPointItem;
+    //  障害物
+    public GameObject obstacleItem;
+    //  アイテム初期位置
+    private Vector3 itemStart = new Vector3 (-12, -3.8f, 0);
     //  アイテムを生成するインターバルの時間
     private float delayTime = 2.0f;
 
@@ -12,8 +16,15 @@ public class ItemCreater : MonoBehaviour {
         InvokeRepeating ("createItem", delayTime, delayTime);
     }
 
+    /**
+     *  アイテムを生成 
+     */
     void createItem(){
-        //  ポイント加算アイテムを生成
-        Instantiate (addpointItem, new Vector3 (-12, -3.8f, 0), Quaternion.identity);
+        if (0 == Random.Range (1, 100) % 5) {
+            Instantiate (obstacleItem, itemStart, Quaternion.identity);
+        } else {
+            Instantiate (addPointItem, itemStart, Quaternion.identity);
+        }
+        Debug.Log (Random.Range (1, 100));
     }
 }

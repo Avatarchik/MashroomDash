@@ -165,14 +165,12 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Script\GameScene\BackGround.cs" />
-     <Compile Include="Assets\Script\GameScene\Floor.cs" />
-     <Compile Include="Assets\Script\GameScene\FloorManager.cs" />
      <Compile Include="Assets\Script\GameScene\GameArea.cs" />
      <Compile Include="Assets\Script\GameScene\ItemCreater.cs" />
      <Compile Include="Assets\Script\GameScene\Player.cs" />
      <Compile Include="Assets\Script\GameScene\PointItem.cs" />
+     <Compile Include="Assets\Script\GameScene\PoisonItem.cs" />
      <Compile Include="Assets\Script\GameScene\Score.cs" />
-     <Compile Include="Assets\Script\GameScene\wall.cs" />
      <Compile Include="Assets\Script\common\CameraFade.cs" />
      <Compile Include="Assets\Script\common\DataFileManager.cs" />
      <Compile Include="Assets\Script\common\SceneFade.cs" />
