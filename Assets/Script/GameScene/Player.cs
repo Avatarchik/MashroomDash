@@ -7,8 +7,6 @@ public class Player : MonoBehaviour {
     private int jumpCount = 0;
     //  ジャンプ上限回数
     private const int JUMP_LIMIT = 2;
-    //  設置判定オブジェクト
-    private Transform groundCheck;
 
     //  接地フラグ
     public bool isGround = false;
@@ -16,13 +14,12 @@ public class Player : MonoBehaviour {
     public LayerMask floorLayer;
 
     void Start(){
-        //  設置判定オブジェクトを取得
-        groundCheck = transform.Find ("groundCheck");
     }
 
 	void Update () {
         //  接地判定
-        isGround = Physics2D.Linecast (transform.position, groundCheck.position, floorLayer);
+        isGround = Physics2D.Linecast (transform.position, 
+		                               transform.position - transform.up * 0.8f, floorLayer);
 
         if (isGround) {
             jumpCount = 0;
@@ -43,6 +40,7 @@ public class Player : MonoBehaviour {
         if ("poisonItem" == col.tag) {
             Destroy (gameObject);
             Destroy (col.gameObject);
+            FindObjectOfType<GameArea> ().isGameEnd = true;
         }
     }
 }

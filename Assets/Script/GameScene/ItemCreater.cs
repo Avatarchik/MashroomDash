@@ -23,7 +23,7 @@ public class ItemCreater : MonoBehaviour {
         if (0 == Random.Range (1, 100) % 5) {
             Instantiate (obstacleItem, itemStart, Quaternion.identity);
         } else {
-            Instantiate (addPointItem, itemStart, Quaternion.identity);
+            Instantiate (obstacleItem, itemStart, Quaternion.identity);
         }
         Debug.Log (Random.Range (1, 100));
     }
