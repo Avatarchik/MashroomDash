@@ -2,7 +2,16 @@
 using System.Collections;
 using System;
 
-public class DataFileManager : MonoBehaviour {
+public class DataFileManager : SingletonMonoBehaviour<DataFileManager> {
+
+    public void Awake(){
+        if (this != Instance) {
+            Destroy (this);
+            return;
+        }
+
+        DontDestroyOnLoad (this.gameObject);
+    }
     /**
      * テキストファイルからテキストを取得する
      */

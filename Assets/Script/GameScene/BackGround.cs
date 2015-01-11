@@ -4,7 +4,11 @@ using System.Collections;
 public class BackGround : MonoBehaviour {
 
     public float speed = 0.1f;
-	
+
+    void Start(){
+        AudioManager.Instance.playBgm ("gameBgm");
+    }
+
 	// Update is called once per frame
 	void Update () {
         //  時間によってyの値が変化

@@ -171,6 +171,7 @@
      <Compile Include="Assets\Script\GameScene\PointItem.cs" />
      <Compile Include="Assets\Script\GameScene\PoisonItem.cs" />
      <Compile Include="Assets\Script\GameScene\Score.cs" />
+     <Compile Include="Assets\Script\common\AudioManager.cs" />
      <Compile Include="Assets\Script\common\DataFileManager.cs" />
      <Compile Include="Assets\Script\common\SceneManager.cs" />
      <Compile Include="Assets\Script\common\ScreenManager.cs" />

@@ -13,6 +13,7 @@ public class GameArea : MonoBehaviour {
     void Update(){
         //  ゲーム終了時に時間経過を停止
         if (isGameEnd) {
+            AudioManager.Instance.stopBgm ();
             SceneManager.Instance.moveScene ("TitleScene", 1.0f);
         }
     }
