@@ -27,8 +27,9 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 
     public void OnGUI ()
     {
-        if (!isFade)
+        if (!isFade) {
             return;
+        }
 
         //透明度を更新して黒テクスチャを描画
         GUI.color = new Color (0, 0, 0, alpha);
