@@ -18,12 +18,10 @@ public class GameArea : MonoBehaviour {
             AudioManager.Instance.stopBgm ();
             Time.timeScale = 0.0f;
             isGameEnd = false;
-            Instantiate (gameOverLayer, new Vector3 (0, 0, -1), Quaternion.identity);
         }
     }
 
     void onReleaseButton(){
         SceneManager.Instance.moveScene ("TitleScene", 0.5f);
     }
-
 }

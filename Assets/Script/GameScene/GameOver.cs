@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class GameOver : MonoBehaviour {
 
-    private UIButton _button;
-
     void Start(){
 
     }
