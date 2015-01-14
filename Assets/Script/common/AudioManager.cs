@@ -70,12 +70,25 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
                 Debug.Log("Se AudioSource is full");
                 return;
             }
+            source = gameObject.AddComponent<AudioSource>();
+            seSource.Add(source);
         }
 
-        source = gameObject.AddComponent<AudioSource>();
-        seSource.Add(source);
+        source.clip = seDictionary [seFileName];
+        source.volume = 0.2f;
+        source.Play ();
     }
 
+    public bool isPlayingSe(){
+        AudioSource source = seSource.FirstOrDefault (s => s.isPlaying);
+        if (source == null) {
+            Debug.Log ("false");
+            return false;
+        } 
+        Debug.Log ("true");
+        return true;
+    }
+        
     /**
      * SE停止
      */

@@ -20,11 +20,11 @@ public class ItemCreater : MonoBehaviour {
      *  アイテムを生成 
      */
     void createItem(){
-        if (0 == Random.Range (1, 100) % 5) {
-            Instantiate (obstacleItem, itemStart, Quaternion.identity);
+        if (0 == Random.Range (0, 100) % 10) {
+            Instantiate (addPointItem, itemStart, Quaternion.identity);
         } else {
             Instantiate (obstacleItem, itemStart, Quaternion.identity);
         }
-        Debug.Log (Random.Range (1, 100));
+        Debug.Log (Random.Range (0.1f, 1.0f));
     }
 }

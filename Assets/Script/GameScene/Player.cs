@@ -38,6 +38,7 @@ public class Player : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col){
         //  毒キノコに当たったらプレイヤーを削除
         if ("poisonItem" == col.tag) {
+            AudioManager.Instance.playSe ("gameOverSe");
             Destroy (gameObject);
             Destroy (col.gameObject);
             FindObjectOfType<GameArea> ().isGameEnd = true;
