@@ -20,7 +20,7 @@ public class ItemCreater : MonoBehaviour {
      *  アイテムを生成 
      */
     void createItem(){
-        if (0 == Random.Range (0, 100) % 10) {
+        if (0 == Random.Range (0, 100) % 2) {
             Instantiate (addPointItem, itemStart, Quaternion.identity);
         } else {
             Instantiate (obstacleItem, itemStart, Quaternion.identity);

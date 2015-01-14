@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Score : MonoBehaviour {
     //  スコア文字
-    public GUIText scoreText;
+    public Text scoreText;
     //  ハイスコア文字
-    public GUIText highScoreText;
+    public Text highScoreText;
 
     //  スコア
     private int score;
@@ -27,9 +28,9 @@ public class Score : MonoBehaviour {
             highScore = score;
         }
 
-        scoreText.text = "Score:" + score.ToString ();
+        scoreText.text = score.ToString ();
         scoreText.color = Color.black;
-        highScoreText.text = "HighScore:" + highScore.ToString ();
+        highScoreText.text = highScore.ToString ();
 	}
 
     public void addPoint (int point){

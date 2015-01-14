@@ -9,3 +9,14 @@
 /Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/nunit.framework.dll
 /Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.DataContract.dll
 /Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/obj/Debug/Assembly-CSharp.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEngine.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Mono.Cecil.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/nunit.framework.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.DataContract.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/ICSharpCode.NRefactory.dll
