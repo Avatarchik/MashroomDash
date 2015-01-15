@@ -30,3 +30,5 @@
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/nunit.framework.dll
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.DataContract.dll
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

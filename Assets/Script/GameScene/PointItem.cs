@@ -13,7 +13,9 @@ public class PointItem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate (moveSpeed, 0, 0);
+        if (0 < Time.timeScale) {
+            transform.Translate (moveSpeed, 0, 0);
+        }
 	}
 
     /**

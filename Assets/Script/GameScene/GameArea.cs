@@ -16,7 +16,8 @@ public class GameArea : MonoBehaviour {
         //  ゲーム終了時に時間経過を停止
         if (isGameEnd) {
             AudioManager.Instance.stopBgm ();
-            Time.timeScale = 0.0f;
+            FindObjectOfType<GameOver> ().fadePanel ();
+            // Time.timeScale = 0.0f;
             isGameEnd = false;
         }
     }
