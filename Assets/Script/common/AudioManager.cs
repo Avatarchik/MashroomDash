@@ -29,8 +29,6 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
             return;
         }
 
-        DontDestroyOnLoad(this.gameObject);
-
         //  AudioListenerを作成
         if(FindObjectsOfType(typeof(AudioListener)).All(o => !((AudioListener)o).enabled)){
             this.gameObject.AddComponent<AudioListener>();
