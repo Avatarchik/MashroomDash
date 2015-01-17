@@ -26,6 +26,7 @@ public class Score : MonoBehaviour {
 
         if (highScore < score) {
             highScore = score;
+            PlayerPrefs.SetInt (highScoreKey, highScore);
         }
 
         scoreText.text = score.ToString ();
@@ -35,11 +36,5 @@ public class Score : MonoBehaviour {
 
     public void addPoint (int point){
         score += point;
-    }
-
-    //  ハイスコアの保存
-    public void SaveHighScore(){
-        PlayerPrefs.SetInt (highScoreKey, highScore);
-        PlayerPrefs.Save ();
     }
 }

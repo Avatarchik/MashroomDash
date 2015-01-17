@@ -25,6 +25,6 @@ public class ItemCreater : MonoBehaviour {
         } else {
             Instantiate (obstacleItem, itemStart, Quaternion.identity);
         }
-        Debug.Log (Random.Range (0.1f, 1.0f));
+        // Debug.Log (Random.Range (0.1f, 1.0f));
     }
 }

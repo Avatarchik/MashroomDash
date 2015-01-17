@@ -18,19 +18,19 @@ public class Player : MonoBehaviour {
 
 	void Update () {
         //  接地判定
-        isGround = Physics2D.Linecast (transform.position, 
-		                               transform.position - transform.up * 0.8f, floorLayer);
-
+        isGround = Physics2D.Linecast (transform.position, transform.position - transform.up * 0.8f, floorLayer);
         if (isGround) {
             jumpCount = 0;
         }
+	}
 
+    public void JumpPlayer(){
         //  ジャンプ回数が二回未満の場合、ジャンプ
-        if (Input.GetMouseButtonDown(0) && JUMP_LIMIT > jumpCount) {
+        if (JUMP_LIMIT > jumpCount) {
             jumpCount++;
             rigidbody2D.AddForce (Vector2.up * 600);
         }
-	}
+    }
 
     /*
      *  当たり判定 
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour {
             AudioManager.Instance.playSe ("gameOverSe");
             Destroy (gameObject);
             Destroy (col.gameObject);
-            FindObjectOfType<GameArea> ().isGameEnd = true;
+            FindObjectOfType<GameArea> ().switchGameOver();
         }
     }
 }

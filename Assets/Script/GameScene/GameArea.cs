@@ -5,7 +5,7 @@ public class GameArea : MonoBehaviour {
 
     public bool isGameEnd = false;
 
-    public GameObject gameOverLayer;
+    public GameObject GameOverLayer;
 
     //  画面外判定
     void OnTriggerExit2D(Collider2D collider){ 
@@ -13,16 +13,20 @@ public class GameArea : MonoBehaviour {
     }
 
     void Update(){
-        //  ゲーム終了時に時間経過を停止
-        if (isGameEnd) {
-            AudioManager.Instance.stopBgm ();
-            FindObjectOfType<GameOver> ().fadePanel ();
-            // Time.timeScale = 0.0f;
-            isGameEnd = false;
+        if (Input.GetMouseButtonUp (0)) {
+            if (isGameEnd) {
+                isGameEnd = false;
+                PlayerPrefs.Save ();
+                SceneManager.Instance.moveScene ("GameScene", 0.5f);
+            } else {
+                FindObjectOfType<Player> ().JumpPlayer ();
+            }
         }
     }
 
-    void onReleaseButton(){
-        SceneManager.Instance.moveScene ("TitleScene", 0.5f);
+    public void switchGameOver(){
+        isGameEnd = true;
+        AudioManager.Instance.stopBgm ();
+        Instantiate (GameOverLayer, new Vector3 (0, 0, 0), Quaternion.identity);
     }
 }
