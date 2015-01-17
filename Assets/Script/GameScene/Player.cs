@@ -24,8 +24,10 @@ public class Player : MonoBehaviour {
         }
 	}
 
+    /**
+     * ジャンプ処理
+     */
     public void JumpPlayer(){
-        //  ジャンプ回数が二回未満の場合、ジャンプ
         if (JUMP_LIMIT > jumpCount) {
             jumpCount++;
             rigidbody2D.AddForce (Vector2.up * 600);
@@ -36,7 +38,6 @@ public class Player : MonoBehaviour {
      *  当たり判定 
      */
     void OnTriggerEnter2D(Collider2D col){
-        //  毒キノコに当たったらプレイヤーを削除
         if ("poisonItem" == col.tag) {
             AudioManager.Instance.playSe ("gameOverSe");
             Destroy (gameObject);

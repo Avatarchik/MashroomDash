@@ -24,7 +24,6 @@ public class PointItem : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Player") {
             Destroy (gameObject);
-			//	
             FindObjectOfType<Score>().addPoint(point);
         }
     }

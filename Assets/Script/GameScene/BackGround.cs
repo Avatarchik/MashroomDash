@@ -8,16 +8,11 @@ public class BackGround : MonoBehaviour {
     void Start(){
         AudioManager.Instance.playBgm ("gameBgm");
     }
-
-	// Update is called once per frame
+        
 	void Update () {
-        //  時間によってyの値が変化
+        //  背景をループ移動
         float x = Mathf.Repeat (Time.time * speed, 1);
-
-        //  Xßの値がずれていくオフセットを作成
         Vector2 offset = new Vector2 (x, 0);
-
-        //  マテリアルにオフセットを設定
         renderer.sharedMaterial.SetTextureOffset ("_MainTex", offset);
 	}
 }

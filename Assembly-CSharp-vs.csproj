@@ -50,7 +50,6 @@
      <Compile Include="Assets\Script\GameScene\GameArea.cs" />
      <Compile Include="Assets\Script\GameScene\GameOver.cs" />
      <Compile Include="Assets\Script\GameScene\ItemCreater.cs" />
-     <Compile Include="Assets\Script\GameScene\MainCamera.cs" />
      <Compile Include="Assets\Script\GameScene\Player.cs" />
      <Compile Include="Assets\Script\GameScene\PointItem.cs" />
      <Compile Include="Assets\Script\GameScene\PoisonItem.cs" />

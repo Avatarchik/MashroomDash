@@ -12,7 +12,6 @@ public class Score : MonoBehaviour {
     private int score;
     //  ハイスコア
     private int highScore;
-
     //  PlayerPrefs保存用のキー
     private string highScoreKey = "highScrore";
 
@@ -23,7 +22,6 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         if (highScore < score) {
             highScore = score;
             PlayerPrefs.SetInt (highScoreKey, highScore);
