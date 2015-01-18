@@ -180,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 766489307}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:

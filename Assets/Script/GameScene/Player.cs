@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
     //  ジャンプ回数
     private int jumpCount = 0;
     //  ジャンプ上限回数
-    private const int JUMP_LIMIT = 2;
+    private const int JUMP_LIMIT = 1;
 
     //  接地フラグ
     public bool isGround = false;
