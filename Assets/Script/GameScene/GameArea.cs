@@ -4,11 +4,11 @@ using System.Collections;
 public class GameArea : MonoBehaviour {
     //  ゲーム終了フラグ
     public bool isGameEnd = false;
-    //  ゲームオーバー画面
-    public GameObject GameOverLayer;
+
+    private GameObject player;
 
     void Start(){
-
+        player = GameObject.Find ("Player");
     }
    
     void Update(){
@@ -21,9 +21,11 @@ public class GameArea : MonoBehaviour {
                 SceneManager.Instance.moveScene ("GameScene", 0.5f);
             } else {
                 //  プレイヤーをジャンプ
-                FindObjectOfType<Player> ().JumpPlayer ();
+                player.GetComponent<Player> ().JumpPlayer ();
             }
         }
+
+//        if()
     }
 
     /**
@@ -39,6 +41,7 @@ public class GameArea : MonoBehaviour {
     public void switchGameOver(){
         isGameEnd = true;
         AudioManager.Instance.stopBgm ();
-        Instantiate (GameOverLayer, new Vector3 (0, 0, 0), Quaternion.identity);
+        GameObject gameOver = GameObject.Find ("GameOver");
+        gameOver.GetComponent<GameOver> ().FadeLayer ();
     }
 }

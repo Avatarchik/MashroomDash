@@ -13,7 +13,14 @@ public class Player : MonoBehaviour {
     //  床レイヤー
     public LayerMask floorLayer;
 
+    public bool isDestroyPlayer;
+
+    void Awake(){
+        isDestroyPlayer = false;
+    }
+
     void Start(){
+
     }
 
 	void Update () {
@@ -39,10 +46,11 @@ public class Player : MonoBehaviour {
      */
     void OnTriggerEnter2D(Collider2D col){
         if ("poisonItem" == col.tag) {
-            AudioManager.Instance.playSe ("gameOverSe");
-            Destroy (gameObject);
-            Destroy (col.gameObject);
-            FindObjectOfType<GameArea> ().switchGameOver();
+            isDestroyPlayer = true;
+//            AudioManager.Instance.playSe ("gameOverSe");
+//            Destroy (gameObject);
+//            Destroy (col.gameObject);
+//            FindObjectOfType<GameArea> ().switchGameOver();
         }
     }
 }

@@ -12,6 +12,9 @@ public class GameOver : MonoBehaviour {
         var color = sprite.color;
         color.a = 0.0f;
         sprite.color = color;
+    }
+
+    public void FadeLayer(){
         //  徐々に画像を表示させる
         iTween.ValueTo (gameObject, iTween.Hash ("from", 0, "To", 0.5f, "time", 1.5f, "onupdate", "UpdateHandler"));
     }
