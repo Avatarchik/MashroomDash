@@ -50,9 +50,8 @@
      <Compile Include="Assets\Script\GameScene\GameArea.cs" />
      <Compile Include="Assets\Script\GameScene\GameOver.cs" />
      <Compile Include="Assets\Script\GameScene\ItemCreater.cs" />
+     <Compile Include="Assets\Script\GameScene\ItemMashroom.cs" />
      <Compile Include="Assets\Script\GameScene\Player.cs" />
-     <Compile Include="Assets\Script\GameScene\PointItem.cs" />
-     <Compile Include="Assets\Script\GameScene\PoisonItem.cs" />
      <Compile Include="Assets\Script\GameScene\Score.cs" />
      <Compile Include="Assets\Script\TitleScene\TitleButton.cs" />
      <Compile Include="Assets\Script\common\AudioManager.cs" />

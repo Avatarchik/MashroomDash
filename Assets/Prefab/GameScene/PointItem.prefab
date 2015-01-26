@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: .100000001
   point: 10
+  isPointItem: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

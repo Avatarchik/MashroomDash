@@ -3,16 +3,14 @@ using System.Collections;
 
 public class ItemCreater : MonoBehaviour {
 
-    //  ポイント加算アイテム
     public GameObject addPointItem;
-    //  障害物
     public GameObject obstacleItem;
-    //  アイテム初期位置
-    private Vector3 itemStart = new Vector3 (-12, -3.8f, 0);
-    //  アイテムを生成するインターバルの時間
-    private float delayTime = 2.0f;
+    private Vector3 itemStart;
+    private float delayTime;
 
     void Awake(){
+        itemStart = GameObject.Find ("ItemCreater").transform.position;
+        delayTime = 2.0f;
         InvokeRepeating ("createItem", delayTime, delayTime);
     }
 
@@ -25,6 +23,5 @@ public class ItemCreater : MonoBehaviour {
         } else {
             Instantiate (obstacleItem, itemStart, Quaternion.identity);
         }
-        // Debug.Log (Random.Range (0.1f, 1.0f));
     }
 }

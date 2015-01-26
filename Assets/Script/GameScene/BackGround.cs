@@ -10,7 +10,6 @@ public class BackGround : MonoBehaviour {
     }
         
 	void Update () {
-        //  背景をループ移動
         float x = Mathf.Repeat (Time.time * speed, 1);
         Vector2 offset = new Vector2 (x, 0);
         renderer.sharedMaterial.SetTextureOffset ("_MainTex", offset);
