@@ -636,7 +636,7 @@ MonoBehaviour:
   isGround: 0
   floorLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 32768
   isDestroyPlayer: 0
 --- !u!50 &450376313
 Rigidbody2D:
@@ -694,7 +694,7 @@ Transform:
   m_LocalScale: {x: .644679606, y: .64467752, z: 1}
   m_Children: []
   m_Father: {fileID: 848990086}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!23 &710245470
 Renderer:
   m_ObjectHideFlags: 0
@@ -772,11 +772,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747673671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.267507464, z: 1}
-  m_LocalScale: {x: .649271607, y: .111289307, z: 1}
+  m_LocalPosition: {x: 0, y: -.286000013, z: 1}
+  m_LocalScale: {x: .649271607, y: .0749688521, z: 1}
   m_Children: []
   m_Father: {fileID: 848990086}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!23 &747673673
 Renderer:
   m_ObjectHideFlags: 0
@@ -883,7 +883,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1766847879
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e0241f1ea2d4a4c01bbaaf1bc540518a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -897,8 +897,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 27.5, y: 15.8823166, z: 1}
   m_Children:
-  - {fileID: 747673672}
   - {fileID: 710245469}
+  - {fileID: 747673672}
   - {fileID: 1616437711}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1325,7 +1325,7 @@ GameObject:
   - 64: {fileID: 1616437713}
   - 23: {fileID: 1616437712}
   - 114: {fileID: 1616437715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,7 +1340,7 @@ Transform:
   m_GameObject: {fileID: 1616437710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0588933043, z: 1}
-  m_LocalScale: {x: .650661647, y: .525615513, z: 7.3053689}
+  m_LocalScale: {x: .650661647, y: .525615513, z: 1}
   m_Children: []
   m_Father: {fileID: 848990086}
   m_RootOrder: 2
@@ -1496,7 +1496,7 @@ GameObject:
   - 33: {fileID: 1702717223}
   - 23: {fileID: 1702717221}
   - 61: {fileID: 1702717222}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

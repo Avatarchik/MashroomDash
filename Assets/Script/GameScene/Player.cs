@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
         if (JUMP_LIMIT > jumpCount) {
             jumpCount++;
             rigidbody2D.AddForce (Vector2.up * 600);
+            Debug.Log ("Jump"+jumpCount);
         }
     }
 }
