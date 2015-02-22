@@ -267,7 +267,7 @@ GameObject:
   - 4: {fileID: 152226476}
   - 212: {fileID: 152226475}
   - 114: {fileID: 152226474}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 4055112113
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eaf1e4bdeac2b40208606b044f796fa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -616,7 +616,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 450376308}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: .323000014, y: -.423000008, z: 0}
+  m_LocalPosition: {x: .323000014, y: -.412999988, z: 0}
   m_LocalScale: {x: .281214833, y: .490196079, z: .0845711231}
   m_Children:
   - {fileID: 1048844198}
@@ -1605,7 +1605,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132912136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.449999988, y: -.409000009, z: 0}
+  m_LocalPosition: {x: -.629000008, y: -.409000009, z: 0}
   m_LocalScale: {x: .0562429689, y: .0980392173, z: .0845711306}
   m_Children: []
   m_Father: {fileID: 204225924}

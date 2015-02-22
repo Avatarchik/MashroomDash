@@ -2,11 +2,17 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
+    //  ジャンプ回数
     private int jumpCount = 0;
+    //  ジャンプ制限回数
     private const int JUMP_LIMIT = 1;
-    public bool isGround = false;
-    public LayerMask floorLayer;
+    private Animator anim;
 
+    //  接地フラグ
+    public bool isGround = false;
+    //  床レイヤー
+    public LayerMask floorLayer;
+    //  プレイヤー破棄フラグ
     public bool isDestroyPlayer;
 
     void Awake(){
@@ -14,11 +20,12 @@ public class Player : MonoBehaviour {
     }
 
     void Start(){
-
+        anim = gameObject.GetComponent<Animator> ();
     }
 
 	void Update () {
         isGround = Physics2D.Linecast (transform.position, transform.position - transform.up * 0.8f, floorLayer);
+        anim.SetBool ("isGround", isGround);
         if (isGround) {
             jumpCount = 0;
         }
@@ -30,7 +37,6 @@ public class Player : MonoBehaviour {
             AudioManager.Instance.playSe ("gameOverSe");
             Destroy (gameObject);
             Destroy (col.gameObject);
-
             GameObject gameArea = GameObject.Find ("GameArea");
             gameArea.GetComponent<GameArea> ().switchGameOver ();
         }
@@ -43,7 +49,6 @@ public class Player : MonoBehaviour {
         if (JUMP_LIMIT > jumpCount) {
             jumpCount++;
             rigidbody2D.AddForce (Vector2.up * 600);
-            Debug.Log ("Jump"+jumpCount);
         }
     }
 }
