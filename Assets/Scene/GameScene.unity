@@ -83,7 +83,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.size
@@ -124,11 +124,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: b9e0bca742ec346939fe753cf4b7fd5d, type: 3}
+      objectReference: {fileID: 8300000, guid: f60b61e847bbc4d418408f7f4a37cb39, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 4c0248b88de614a1290cb9fb49372dc9, type: 3}
+      objectReference: {fileID: 8300000, guid: cdc47622f9bad42cba1f5a6dc8eabda0, type: 3}
+    - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
+      propertyPath: seList.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f332724171ec94ffa898f4fa55d314c2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
   m_RootGameObject: {fileID: 432367904}
@@ -470,9 +474,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmList:
-  - {fileID: 8300000, guid: b9e0bca742ec346939fe753cf4b7fd5d, type: 3}
+  - {fileID: 8300000, guid: f60b61e847bbc4d418408f7f4a37cb39, type: 3}
   seList:
-  - {fileID: 8300000, guid: 4c0248b88de614a1290cb9fb49372dc9, type: 3}
+  - {fileID: 8300000, guid: cdc47622f9bad42cba1f5a6dc8eabda0, type: 3}
+  - {fileID: 8300000, guid: f332724171ec94ffa898f4fa55d314c2, type: 3}
   seSourceCount: 10
 --- !u!4 &432367906
 Transform:

@@ -36,50 +36,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b94fef6769c64f178e7992230f44e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: ef908cac0352f4d818da2708ffca0bcf, type: 2}
-  sprites:
-  - name: Button
-    outer:
-      serializedVersion: 2
-      x: 0
-      y: 11
-      width: 175
-      height: 58
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 11
-      width: 175
-      height: 58
-    rotated: 0
-    paddingLeft: .068571426
-    paddingRight: .0628571436
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PressButton
-    outer:
-      serializedVersion: 2
-      x: 0
-      y: 70
-      width: 175
-      height: 58
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 70
-      width: 175
-      height: 58
-    rotated: 0
-    paddingLeft: .068571426
-    paddingRight: .0628571436
-    paddingTop: 0
-    paddingBottom: 0
-  mCoordinates: 0
-  mPixelSize: 1
-  mReplacement: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

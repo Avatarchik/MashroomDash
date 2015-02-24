@@ -73,7 +73,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
         }
 
         source.clip = seDictionary [seFileName];
-        source.volume = 0.5f;
+//        source.volume = 0.5f;
         source.Play ();
     }
 
@@ -109,7 +109,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
         bgmSource.Stop ();
         bgmSource.clip = bgmDictionary [bgmFileName];
         bgmSource.Play ();
-        bgmSource.volume = 0.2f;
+//        bgmSource.volume = 0.5f;
     }
 
     /**

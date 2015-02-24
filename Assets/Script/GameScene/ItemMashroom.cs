@@ -24,6 +24,9 @@ public class ItemMashroom : MonoBehaviour {
             if (col.tag == "Player") {
                 Destroy (gameObject);
                 FindObjectOfType<Score>().addPoint(point);
+                if (isPointItem) {
+                    AudioManager.Instance.playSe ("ItemGet");
+                }
             }
         }
     }

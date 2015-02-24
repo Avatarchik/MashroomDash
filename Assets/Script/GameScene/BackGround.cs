@@ -6,7 +6,7 @@ public class BackGround : MonoBehaviour {
     public float speed = 0.1f;
 
     void Start(){
-        AudioManager.Instance.playBgm ("gameBgm");
+        AudioManager.Instance.playBgm ("Game");
     }
         
 	void Update () {

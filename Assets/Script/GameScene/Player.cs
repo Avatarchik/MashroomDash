@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col){
         if ("poisonItem" == col.tag) {
             isDestroyPlayer = true;
-            AudioManager.Instance.playSe ("gameOverSe");
+            AudioManager.Instance.playSe ("GameOver");
             Destroy (gameObject);
             Destroy (col.gameObject);
             GameObject gameArea = GameObject.Find ("GameArea");
