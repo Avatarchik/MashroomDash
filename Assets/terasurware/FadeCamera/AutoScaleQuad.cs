@@ -46,8 +46,8 @@ public class AutoScaleQuad : MonoBehaviour {
 	void UpdateScale ()
 	{
 
-		float height = camera.orthographicSize * 2;
-		float width = height * camera.aspect;
+		float height = GetComponent<Camera>().orthographicSize * 2;
+		float width = height * GetComponent<Camera>().aspect;
 
 		if( scaleType == ScaleType.Box )
 		{
@@ -63,8 +63,8 @@ public class AutoScaleQuad : MonoBehaviour {
 		if( scalableMask )
 		{
 			float rate = height / width;
-			targetQuad.renderer.material.SetTextureScale("_MaskTex", new Vector2(1, rate) );
-			targetQuad.renderer.material.SetTextureOffset("_MaskTex", new Vector2(0, (1 - rate) / 2 ) );
+			targetQuad.GetComponent<Renderer>().material.SetTextureScale("_MaskTex", new Vector2(1, rate) );
+			targetQuad.GetComponent<Renderer>().material.SetTextureOffset("_MaskTex", new Vector2(0, (1 - rate) / 2 ) );
 		}
 
 		enabled = false;

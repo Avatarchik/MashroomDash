@@ -34,3 +34,13 @@
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/nunit.framework.dll
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.DataContract.dll
 /Users/hiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.Android.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.iOS.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.BB10.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.WebGL.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.LinuxStandalone.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.WindowsStandalone.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.OSXStandalone.Extensions.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/abehiroaki/Desktop/UnityProject/MashroomDash/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll

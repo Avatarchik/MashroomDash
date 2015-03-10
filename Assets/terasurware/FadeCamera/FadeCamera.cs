@@ -53,13 +53,13 @@ public class FadeCamera : SingletonMonoBehaviour<FadeCamera> {
 
 	void OnEnable()
 	{
-		camera.enabled = true;
+		GetComponent<Camera>().enabled = true;
 	}
 
 	void OnDisable()
 	{
 		if(! fadein  )
-			camera.enabled = false;
+			GetComponent<Camera>().enabled = false;
 	}
 
 	void Update () {
