@@ -24,17 +24,18 @@ public class Player : MonoBehaviour {
     }
 
 	void Update () {
-        isGround = Physics2D.Linecast (transform.position, transform.position - transform.up * 0.8f, floorLayer);
-        anim.SetBool ("isGround", isGround);
-        if (isGround) {
-            jumpCount = 0;
-        }
+//        isGround = Physics2D.Linecast (transform.position, transform.position - transform.up * 0.8f, floorLayer);
+//        anim.SetBool ("isGround", isGround);
+//        if (isGround) {
+//            jumpCount = 0;
+//        }
 	}
 
     void OnTriggerEnter2D(Collider2D col){
         if ("poisonItem" == col.tag) {
             isDestroyPlayer = true;
-            AudioManager.Instance.playSe ("GameOver");
+			Debug.Log("IN!");
+//            AudioManager.Instance.playSe ("GameOver");
             Destroy (gameObject);
             Destroy (col.gameObject);
             GameObject gameArea = GameObject.Find ("GameArea");
