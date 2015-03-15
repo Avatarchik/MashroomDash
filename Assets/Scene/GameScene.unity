@@ -1424,7 +1424,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1336899379
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: 723c5827561654c43a65e9c02dcaa966, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 723c5827561654c43a65e9c02dcaa966, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1846187199
 Transform:
