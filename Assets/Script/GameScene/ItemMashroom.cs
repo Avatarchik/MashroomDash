@@ -25,7 +25,7 @@ public class ItemMashroom : MonoBehaviour {
                 Destroy (gameObject);
                 FindObjectOfType<Score>().addPoint(point);
                 if (isPointItem) {
-                    AudioManager.Instance.playSe ("ItemGet");
+
                 }
             }
         }
