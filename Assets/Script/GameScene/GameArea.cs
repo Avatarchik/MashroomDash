@@ -32,7 +32,6 @@ public class GameArea : MonoBehaviour {
      */
     public void switchGameOver(){
         isGameEnd = true;
-        AudioManager.Instance.stopBgm ();
         GameObject gameOver = GameObject.Find ("GameOver");
         gameOver.GetComponent<GameOver> ().FadeLayer ();
     }
