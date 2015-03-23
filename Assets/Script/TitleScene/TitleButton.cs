@@ -18,4 +18,9 @@ public class TitleButton : MonoBehaviour {
         AudioManager.Instance.playSe ("ButtonSe");
         SceneManager.Instance.moveScene ("GameScene", 0.5f);
     }
+
+	public void onTapMenuButton(){
+		AudioManager.Instance.playSe("ButtonSe");
+
+	}
 }

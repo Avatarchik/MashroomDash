@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class GameArea : MonoBehaviour {
+
     //  ゲーム終了フラグ
     public bool isGameEnd = false;
 
-    private GameObject player;
-
     void Start(){
-        player = GameObject.Find ("Player");
     }
    
     void Update(){
@@ -18,7 +16,7 @@ public class GameArea : MonoBehaviour {
                 PlayerPrefs.Save ();
                 SceneManager.Instance.moveScene ("GameScene", 0.5f);
             } else {
-                player.GetComponent<Player> ().JumpPlayer ();
+				this.GetComponentInChildren<Player>().JumpPlayer();
             }
         }
     }
@@ -32,7 +30,6 @@ public class GameArea : MonoBehaviour {
      */
     public void switchGameOver(){
         isGameEnd = true;
-        GameObject gameOver = GameObject.Find ("GameOver");
-        gameOver.GetComponent<GameOver> ().FadeLayer ();
+		this.GetComponentInChildren<GameOver> ().FadeLayer ();
     }
 }

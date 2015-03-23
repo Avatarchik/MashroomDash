@@ -137,15 +137,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 59d79576b915c4540bd2a50e1a163f2d, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 9c4bcae17599e4663b21d6a69b6602b3, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: f332724171ec94ffa898f4fa55d314c2, type: 3}
+      objectReference: {fileID: 8300000, guid: a81aa6574f07744dcbefd16651bb2c09, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
   m_IsPrefabParent: 0
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addPointItem: {fileID: 100000, guid: f6aceb0bc614245948a8a838cb2fd775, type: 2}
-  obstacleItem: {fileID: 100000, guid: f752cb19c5ae04d27a993c0d7b5d9da1, type: 2}
+  poisonItem: {fileID: 100000, guid: f752cb19c5ae04d27a993c0d7b5d9da1, type: 2}
 --- !u!4 &2132912138
 Transform:
   m_ObjectHideFlags: 0

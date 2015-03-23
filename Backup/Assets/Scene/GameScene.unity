@@ -137,7 +137,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 59d79576b915c4540bd2a50e1a163f2d, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[0]
       value: 

@@ -4,12 +4,12 @@ using System.Collections;
 public class ItemCreater : MonoBehaviour {
 
     public GameObject addPointItem;
-    public GameObject obstacleItem;
+    public GameObject poisonItem;
     private Vector3 itemStart;
     private float delayTime;
 
     void Awake(){
-        itemStart = GameObject.Find ("ItemCreater").transform.position;
+		itemStart = transform.position;
         delayTime = 2.0f;
         InvokeRepeating ("createItem", delayTime, delayTime);
     }
@@ -21,7 +21,7 @@ public class ItemCreater : MonoBehaviour {
         if (0 == Random.Range (0, 100) % 2) {
             Instantiate (addPointItem, itemStart, Quaternion.identity);
         } else {
-            Instantiate (obstacleItem, itemStart, Quaternion.identity);
+			Instantiate (poisonItem, itemStart, Quaternion.identity);
         }
     }
 }
