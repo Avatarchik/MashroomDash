@@ -146,6 +146,10 @@ Prefab:
       propertyPath: seList.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: a81aa6574f07744dcbefd16651bb2c09, type: 3}
+    - target: {fileID: 100000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
   m_IsPrefabParent: 0
@@ -890,6 +894,10 @@ Prefab:
     - target: {fileID: 400000, guid: b95b93d32ad3a4ee29c4fc93a13fba0c, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b95b93d32ad3a4ee29c4fc93a13fba0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b95b93d32ad3a4ee29c4fc93a13fba0c, type: 2}

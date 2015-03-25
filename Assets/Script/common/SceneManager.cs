@@ -10,7 +10,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
     //  フェード実行フラグ
     private bool isFade = false;
 
-    public void Awake(){
+   /* public void Awake(){
         if (this != Instance) {
             Destroy (this);
             return;
@@ -23,17 +23,17 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
         blackTexture.ReadPixels (new Rect (0, 0, 32, 32), 0, 0, false);
         blackTexture.SetPixel (0, 0, Color.white);
         blackTexture.Apply ();
-    }
+    }*/
 
     public void OnGUI ()
     {
-        if (!isFade) {
+       /* if (!isFade) {
             return;
         }
 
         //透明度を更新して黒テクスチャを描画
         GUI.color = new Color (0, 0, 0, alpha);
-        GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), blackTexture);
+        GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), blackTexture);*/
     }
 
     //  シーンを切り替え
