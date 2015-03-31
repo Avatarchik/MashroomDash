@@ -36,8 +36,7 @@ public class Player : MonoBehaviour {
             isDestroyPlayer = true;
             Destroy (gameObject);
             Destroy (col.gameObject);
-            GameObject gameArea = GameObject.Find ("GameArea");
-            gameArea.GetComponent<GameArea> ().switchGameOver ();
+			this.GetComponentInParent<GameArea>().switchGameOver();
         }
     }
 

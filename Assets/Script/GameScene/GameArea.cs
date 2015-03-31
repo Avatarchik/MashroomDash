@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GameArea : MonoBehaviour {
+
     //  ゲーム終了フラグ
     public bool isGameEnd = false;
 
@@ -17,7 +18,6 @@ public class GameArea : MonoBehaviour {
     }
 
     void Start(){
-        _itemPosition = new Vector3 (-8.1f, -4.2f, 0);
     }
    
     void Update(){
@@ -51,7 +51,6 @@ public class GameArea : MonoBehaviour {
 
     public void switchGameOver(){
         isGameEnd = true;
-        GameObject gameOver = GameObject.Find ("GameOver");
-        gameOver.GetComponent<GameOver> ().FadeLayer ();
+		this.GetComponentInChildren<GameOver> ().FadeLayer ();
     }
 }

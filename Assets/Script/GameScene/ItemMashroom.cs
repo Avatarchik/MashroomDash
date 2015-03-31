@@ -22,6 +22,7 @@ public class ItemMashroom : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col){
         if (isPointItem) {
             if (col.tag == "Player") {
+				AudioManager.Instance.playSe("ItemGet");
                 Destroy (gameObject);
                 FindObjectOfType<Score>().addPoint(point);
             }
