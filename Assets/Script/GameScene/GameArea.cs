@@ -5,10 +5,19 @@ public class GameArea : MonoBehaviour {
     //  ゲーム終了フラグ
     public bool isGameEnd = false;
 
-    private GameObject player;
+    public GameObject _pointItem;
+    public GameObject _poisonItem;
+    public GameObject _bird;
+
+    private Vector3 _itemPosition;
+
+    void Awake(){
+        const float delayTime = 2.0f;
+        InvokeRepeating ("createItem", delayTime, delayTime);
+    }
 
     void Start(){
-        player = GameObject.Find ("Player");
+        _itemPosition = new Vector3 (-8.1f, -4.2f, 0);
     }
    
     void Update(){
@@ -18,7 +27,7 @@ public class GameArea : MonoBehaviour {
                 PlayerPrefs.Save ();
                 SceneManager.Instance.moveScene ("GameScene", 0.5f);
             } else {
-                player.GetComponent<Player> ().JumpPlayer ();
+                GetComponentInChildren<Player> ().JumpPlayer ();
             }
         }
     }
@@ -27,9 +36,19 @@ public class GameArea : MonoBehaviour {
         Destroy (collider.gameObject);
     }
 
-    /**
-     * ゲームオーバーに切り替え
-     */
+    void createItem(){
+        GameObject item;
+        if (0 == Random.Range (0, 100) % 3) {
+            item = (GameObject)Instantiate (_pointItem, _itemPosition, Quaternion.identity);
+        } else if (1 == Random.Range (0, 100) % 3) {
+            item = (GameObject)Instantiate (_poisonItem, _itemPosition, Quaternion.identity);
+        } else {
+            Vector3 birdPos = new Vector3 (-8.1f, -0.31f, 0);
+            item = (GameObject)Instantiate (_bird, birdPos, Quaternion.identity);
+        }
+        item.transform.SetParent (transform);
+    }
+
     public void switchGameOver(){
         isGameEnd = true;
         GameObject gameOver = GameObject.Find ("GameOver");

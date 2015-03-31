@@ -10,7 +10,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
     //  フェード実行フラグ
     private bool isFade = false;
 
-    public void Awake(){
+    new public void Awake(){
         if (this != Instance) {
             Destroy (this);
             return;
