@@ -18,6 +18,7 @@ public class GameArea : MonoBehaviour {
     }
 
     void Start(){
+        _itemPosition = new Vector3 (-8.1f, -4.2f, 0);
     }
    
     void Update(){

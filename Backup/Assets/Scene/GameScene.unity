@@ -96,7 +96,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.size
