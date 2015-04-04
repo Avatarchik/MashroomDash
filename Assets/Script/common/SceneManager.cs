@@ -1,66 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 
-    //  暗転用テクスチャー
-    private Texture2D blackTexture;
-    //  フェード中の透明度
-    private float alpha = 0;
-    //  フェード実行フラグ
-    private bool isFade = false;
+	//	フェード用オブジェクト
+	private GameObject _black;
 
-    public void Awake(){
+	new public void Awake(){
         if (this != Instance) {
             Destroy (this);
             return;
         }
 
         DontDestroyOnLoad (this.gameObject);
-
-        //  暗転用テクスチャーを作成
-        blackTexture = new Texture2D (32, 32, TextureFormat.RGB24, false);
-        blackTexture.ReadPixels (new Rect (0, 0, 32, 32), 0, 0, false);
-        blackTexture.SetPixel (0, 0, Color.white);
-        blackTexture.Apply ();
+    }
+		
+	public void moveScene(string scene, float time = 1.1f){
+		StartCoroutine (TransScene (scene, time));
     }
 
-    public void OnGUI ()
-    {
-        if (!isFade) {
-            return;
-        }
+	RawImage setFadeObject(){
+		_black = new GameObject ();
+		_black.name = "FadeObject";
+		_black.transform.SetParent (GameObject.Find ("MainUI").transform);
+		RectTransform rect = _black.AddComponent<RectTransform> ();
+		rect.anchorMax = new Vector2 (1, 1);
+		rect.anchorMin = new Vector2 (0, 0);
+		rect.anchoredPosition = new Vector2 (0, 0);
+		return _black.AddComponent<RawImage> ();
+	}
 
-        //透明度を更新して黒テクスチャを描画
-        GUI.color = new Color (0, 0, 0, alpha);
-        GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), blackTexture);
-    }
+	private IEnumerator TransScene(string scene, float interval){
+		float time = 0;
+		RawImage raw = setFadeObject ();
 
-    //  シーンを切り替え
-    public void moveScene(string scene, float fadeTime){
-        StartCoroutine (TransScene (scene, fadeTime));
-    }
+		while (time <= interval) {
+			raw.color = new Color (0, 0, 0, Mathf.Lerp (0, 1, time / interval));
+			time += Time.deltaTime;
+			yield return 0;
+		}
 
-    //  シーン繊維用コルーチン
-    private IEnumerator TransScene(string scene, float fadeTime){
-        //  暗くする
-        isFade = true;
-        float time = 0;
-        while (time <= fadeTime) {
-            alpha = Mathf.Lerp (0, 1, time / fadeTime);
-            time += Time.deltaTime;
-            yield return 0;
-        }
+		Application.LoadLevel (scene);
 
-        Application.LoadLevel (scene);
-
-        //  明るくする
-        time = 0;
-        while (time <= fadeTime) {
-            alpha = Mathf.Lerp (1, 0, time / fadeTime);
-            time += Time.deltaTime;
-            yield return 0;
-        }
-        isFade = false;
+		Destroy (_black);
     }
 }
