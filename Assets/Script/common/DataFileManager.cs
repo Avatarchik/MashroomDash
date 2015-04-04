@@ -4,7 +4,7 @@ using System;
 
 public class DataFileManager : SingletonMonoBehaviour<DataFileManager> {
 
-    public void Awake(){
+    new public void Awake(){
         if (this != Instance) {
             Destroy (this);
             return;

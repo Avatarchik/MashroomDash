@@ -96,11 +96,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: m_LocalPosition.x
@@ -137,11 +137,11 @@ Prefab:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 59d79576b915c4540bd2a50e1a163f2d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: f332724171ec94ffa898f4fa55d314c2, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[1]
       value: 
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4e026a817ebf64572a9c47f07731b29f, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -466,6 +466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameEnd: 0
+  _pointItem: {fileID: 100000, guid: f6aceb0bc614245948a8a838cb2fd775, type: 2}
+  _poisonItem: {fileID: 100000, guid: f752cb19c5ae04d27a993c0d7b5d9da1, type: 2}
+  _bird: {fileID: 140420, guid: 06eec92062de9451fa04cee44413ebb9, type: 2}
 --- !u!61 &204225923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -491,7 +494,6 @@ Transform:
   m_Children:
   - {fileID: 1702717224}
   - {fileID: 152226476}
-  - {fileID: 2132912138}
   - {fileID: 1846187199}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -543,7 +545,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4e026a817ebf64572a9c47f07731b29f, type: 3}
     m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
@@ -942,7 +944,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4e026a817ebf64572a9c47f07731b29f, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -1008,7 +1010,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4e026a817ebf64572a9c47f07731b29f, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -1437,7 +1439,7 @@ Transform:
   m_LocalScale: {x: .281214833, y: .490196079, z: 1}
   m_Children: []
   m_Father: {fileID: 204225924}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!50 &1846187200
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1482,44 +1484,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32768
   isDestroyPlayer: 0
---- !u!1 &2132912136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2132912138}
-  - 114: {fileID: 2132912137}
-  m_Layer: 0
-  m_Name: ItemCreater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2132912137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2132912136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08bb61eb5dbab41eaba8fb18bbf3f3ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addPointItem: {fileID: 100000, guid: f6aceb0bc614245948a8a838cb2fd775, type: 2}
-  obstacleItem: {fileID: 100000, guid: f752cb19c5ae04d27a993c0d7b5d9da1, type: 2}
---- !u!4 &2132912138
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2132912136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.629000008, y: -.409000009, z: 0}
-  m_LocalScale: {x: .0562429689, y: .0980392173, z: .0845711306}
-  m_Children: []
-  m_Father: {fileID: 204225924}
-  m_RootOrder: 2

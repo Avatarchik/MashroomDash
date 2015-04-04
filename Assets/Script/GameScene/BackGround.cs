@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BackGround : MonoBehaviour {
@@ -6,7 +6,7 @@ public class BackGround : MonoBehaviour {
     public float speed = 0.1f;
 
     void Start(){
-        AudioManager.Instance.playBgm ("GameBgm");
+
     }
         
 	void Update () {

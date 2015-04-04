@@ -23,8 +23,6 @@ public class GameOver : MonoBehaviour {
      * ゲームオーバー画面を表示
      */
     public void FadeLayer(){
-		AudioManager.Instance.stopBgm ();
-		AudioManager.Instance.playSe("GameOver");
         iTween.ValueTo (gameObject, iTween.Hash ("from", 0, "To", 0.5f, "time", 1.5f, 
 		                                         "onupdate", "UpdateHandler"));
     }

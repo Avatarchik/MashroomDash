@@ -1,0 +1,12 @@
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\obj\Debug\UnityVS.MashroomDash.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\obj\Debug\Assembly-CSharp.dll
+C:\Users\hiroaki\Desktop\UnityProject\MashroomDash\obj\Debug\Assembly-CSharp.pdb

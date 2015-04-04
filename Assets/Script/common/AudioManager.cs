@@ -22,7 +22,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
     //  SEファイルリスト
     private Dictionary<string, AudioClip> seDictionary = null;
 
-    public void Awake(){
+    new public void Awake(){
         if(this != Instance)
         {
             Destroy(this);
