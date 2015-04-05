@@ -9,7 +9,8 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 
 	new public void Awake(){
         if (this != Instance) {
-            Destroy (this);
+			Destroy (gameObject);
+			Debug.Log ("Destroy");
             return;
         }
 
@@ -23,7 +24,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 	RawImage setFadeObject(){
 		_black = new GameObject ();
 		_black.name = "FadeObject";
-		_black.transform.SetParent (GameObject.Find ("MainUI").transform);
+		_black.transform.SetParent (GameObject.Find ("Main").transform);
 		RectTransform rect = _black.AddComponent<RectTransform> ();
 		rect.anchorMax = new Vector2 (1, 1);
 		rect.anchorMin = new Vector2 (0, 0);
@@ -42,6 +43,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 		}
 
 		Application.LoadLevel (scene);
+		yield return 0;
 
 		Destroy (_black);
     }
