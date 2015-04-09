@@ -26,7 +26,7 @@ public class GameArea : MonoBehaviour {
             if (isGameEnd) {
                 isGameEnd = false;
                 PlayerPrefs.Save ();
-                SceneManager.Instance.moveScene ("GameScene", 0.5f);
+//                SceneManager.Instance.moveScene ("GameScene", 0.5f);
             } else {
                 GetComponentInChildren<Player> ().JumpPlayer ();
             }
