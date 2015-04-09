@@ -46,7 +46,7 @@ public class Player : MonoBehaviour {
     public void JumpPlayer(){
         if (JUMP_LIMIT > jumpCount) {
             jumpCount++;
-            GetComponent<Rigidbody2D>().AddForce (Vector2.up * 600);
+            GetComponent<Rigidbody2D>().AddForce (Vector2.up * 700);
         }
     }
 }

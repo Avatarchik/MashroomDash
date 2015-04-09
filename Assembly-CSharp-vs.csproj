@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\GameOver\MainUI.cs" />
+     <Compile Include="Assets\Script\GameOver\ResultScore.cs" />
      <Compile Include="Assets\Script\GameScene\BackGround.cs" />
      <Compile Include="Assets\Script\GameScene\Bird.cs" />
      <Compile Include="Assets\Script\GameScene\GameArea.cs" />
