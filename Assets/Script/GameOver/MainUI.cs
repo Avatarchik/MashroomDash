@@ -10,6 +10,8 @@ public class MainUI : MonoBehaviour {
 
     public GameObject credit;
 
+    int _resultScore;
+
 	// Use this for initialization
 	void Start () {
         //  SEを再生
@@ -20,15 +22,15 @@ public class MainUI : MonoBehaviour {
         _highScoreMessage = GameObject.Find ("HighScoreMessage").gameObject.GetComponent<Text> ();
 
         //  スコアを表示
-        int resultScore = GameManager.Instance.getIntData ("Score");
-        string score = "スコア::" + resultScore.ToString();
+        _resultScore = GameManager.Instance.getIntData ("Score");
+        string score = "スコア::" + _resultScore.ToString();
         _score.text = score;
 
         //  ハイスコアが更新された場合のみ表示
         int currentHighScore = PlayerPrefs.GetInt ("highScore");
         Debug.Log (currentHighScore);
-        if (currentHighScore < resultScore) {
-            PlayerPrefs.SetInt ("highScore", resultScore);
+        if (currentHighScore < _resultScore) {
+            PlayerPrefs.SetInt ("highScore", _resultScore);
             _highScoreMessage.text = "ハイスコア更新!!";
         } else {
             _highScoreMessage.text = "";
@@ -36,10 +38,17 @@ public class MainUI : MonoBehaviour {
 	}
 
     public void OnTapCreditButton(){
+        AudioManager.Instance.playSe ("ButtonSe");
         Instantiate (credit, new Vector3 (1262, 256.5f, 0), Quaternion.identity);
     }
 
     public void OnTapRetryButton(){
+        AudioManager.Instance.playSe ("ButtonSe");
         SceneManager.Instance.loadLevel ("GameScene", 0.5f);
+    }
+
+    public void OnTapTwitterButton(){
+        string text = "きのこたくさんとれたゾ！\nすこあ：" + _resultScore.ToString ();
+        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(text + "\n#きのこの!"));
     }
 }

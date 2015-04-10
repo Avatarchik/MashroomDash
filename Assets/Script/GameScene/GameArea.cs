@@ -19,7 +19,7 @@ public class GameArea : MonoBehaviour {
 
     void Start(){
         AudioManager.Instance.playBgm ("Stage");
-        _itemPosition = new Vector3 (-8.1f, -4.2f, 0);
+        _itemPosition = new Vector3 (-8.1f, -3.7f, 0);
     }
    
     void Update(){

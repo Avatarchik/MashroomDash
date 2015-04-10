@@ -96,11 +96,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: m_LocalPosition.x
@@ -137,11 +137,11 @@ Prefab:
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: bgmList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 42a8aafc1ebb8433eb813221327979a5, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: f332724171ec94ffa898f4fa55d314c2, type: 3}
+      objectReference: {fileID: 8300000, guid: 01de3be1f66e44d20bf37f2130efc34a, type: 3}
     - target: {fileID: 11400000, guid: 6a27300c42821439dabe6f8fbcce8118, type: 2}
       propertyPath: seList.Array.data[1]
       value: 

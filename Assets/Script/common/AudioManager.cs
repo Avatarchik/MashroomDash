@@ -86,6 +86,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
         Debug.Log ("true");
         return true;
     }
+
+    public void setSeVolume(float volume){
+        seSource.ForEach (sources => sources.volume = volume);
+    }
         
     /**
      * SE停止
@@ -93,7 +97,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
     public void stopSe(){
         seSource.ForEach (sources => sources.Stop ());
     }
-
+        
     /**
      * BGM再生
      */
@@ -109,7 +113,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager> {
         bgmSource.Stop ();
         bgmSource.clip = bgmDictionary [bgmFileName];
         bgmSource.Play ();
-//        bgmSource.volume = 0.5f;
+    }
+
+    public void setBgmVolume(float volume){
+        bgmSource.volume = volume;
     }
 
     /**
