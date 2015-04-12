@@ -5,8 +5,7 @@ public class Player : MonoBehaviour {
     //  ジャンプ回数
     private int jumpCount = 0;
     //  ジャンプ制限回数
-    private const int JUMP_LIMIT = 1;
-    private Animator anim;
+    private const int JUMP_LIMIT = 2;
 
     //  接地フラグ
     public bool isGround = false;
@@ -20,14 +19,15 @@ public class Player : MonoBehaviour {
     }
 
     void Start(){
-        anim = gameObject.GetComponent<Animator> ();
+
     }
 
 	void Update () {
-        isGround = Physics2D.Linecast (transform.position, transform.position - transform.up * 0.8f, floorLayer);
-        anim.SetBool ("isGround", isGround);
-        if (isGround) {
-            jumpCount = 0;
+        if (Input.GetMouseButtonUp (0)) {
+            if (JUMP_LIMIT > jumpCount) {
+                jumpCount++;
+                GetComponent<Rigidbody2D>().AddForce (Vector2.up * 700);
+            }
         }
 	}
 
@@ -36,17 +36,14 @@ public class Player : MonoBehaviour {
             isDestroyPlayer = true;
             Destroy (gameObject);
             Destroy (col.gameObject);
-			this.GetComponentInParent<GameArea>().switchGameOver();
+            this.GetComponentInParent<GameArea> ().switchGameOver ();
         }
     }
 
-    /**
-     * ジャンプ処理
-     */
-    public void JumpPlayer(){
-        if (JUMP_LIMIT > jumpCount) {
-            jumpCount++;
-            GetComponent<Rigidbody2D>().AddForce (Vector2.up * 600);
+    void OnCollisionEnter2D(Collision2D col){
+        if ("Floor" == col.gameObject.tag) {
+            Debug.Log ("RESET");
+            jumpCount = 0;
         }
     }
 }

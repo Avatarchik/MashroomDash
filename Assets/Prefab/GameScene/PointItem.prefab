@@ -39,7 +39,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100000}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .0250000004
   m_GravityScale: 0
   m_FixedAngle: 1
   m_IsKinematic: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7970d94d5d8c4f8bb0f9bb5857b5724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .100000001
+  moveSpeed: .0250000004
   point: 10
   isPointItem: 1
 --- !u!212 &21200000

@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25921384c47e1471784567b36b689eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .200000003
+  moveSpeed: .0500000007
   point: 10
   isPointItem: 0
 --- !u!212 &21224216

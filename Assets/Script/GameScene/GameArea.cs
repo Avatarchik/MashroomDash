@@ -18,19 +18,12 @@ public class GameArea : MonoBehaviour {
     }
 
     void Start(){
-        _itemPosition = new Vector3 (-8.1f, -4.2f, 0);
+        AudioManager.Instance.playBgm ("Stage");
+        _itemPosition = new Vector3 (-8.1f, -3.7f, 0);
     }
    
     void Update(){
-        if (Input.GetMouseButtonUp (0)) {
-            if (isGameEnd) {
-                isGameEnd = false;
-                PlayerPrefs.Save ();
-//                SceneManager.Instance.moveScene ("GameScene", 0.5f);
-            } else {
-                GetComponentInChildren<Player> ().JumpPlayer ();
-            }
-        }
+
     }
 
     void OnTriggerExit2D(Collider2D collider){ 
@@ -52,6 +45,7 @@ public class GameArea : MonoBehaviour {
 
     public void switchGameOver(){
         isGameEnd = true;
-		this.GetComponentInChildren<GameOver> ().FadeLayer ();
+        FindObjectOfType<Score> ().saveScore ();
+        Application.LoadLevel ("GameOverScene");
     }
 }
