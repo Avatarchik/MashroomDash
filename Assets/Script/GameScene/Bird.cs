@@ -15,7 +15,7 @@ public class Bird : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (0 < Time.timeScale) {
-            transform.Translate (moveSpeed, 0, 0);
+            transform.Translate (Vector3.right * Time.deltaTime * moveSpeed);
         }
     }
 

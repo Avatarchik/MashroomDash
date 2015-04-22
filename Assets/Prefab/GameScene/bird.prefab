@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 451108}
   - 212: {fileID: 21224216}
   - 114: {fileID: 11440700}
-  - 61: {fileID: 6136210}
   - 50: {fileID: 5095872}
+  - 60: {fileID: 6042964}
   m_Layer: 18
   m_Name: bird
   m_TagString: poisonItem
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.560000002, y: .312000006, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: .100000001}
+  m_LocalPosition: {x: -3.83999991, y: -1.25, z: 0}
+  m_LocalScale: {x: .589419723, y: .611764371, z: .100000001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,8 +46,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6136210
-BoxCollider2D:
+--- !u!60 &6042964
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,8 +57,38 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: .629999995, y: .579999983}
+  m_Points:
+    m_Paths:
+    - - {x: .310000002, y: -.550000012}
+      - {x: .649999976, y: -.479999989}
+      - {x: .709999979, y: -.449999988}
+      - {x: .730000019, y: -.419999987}
+      - {x: .730000019, y: -.310000002}
+      - {x: .709999979, y: -.280000001}
+      - {x: .600000024, y: -.180000007}
+      - {x: .439999998, y: -.0500000007}
+      - {x: .330000013, y: 0}
+      - {x: .310000002, y: .159999996}
+      - {x: .330000013, y: .379999995}
+      - {x: .189999998, y: .409999996}
+      - {x: .0700000003, y: .330000013}
+      - {x: -.0399999991, y: .170000002}
+      - {x: -.180000007, y: .230000004}
+      - {x: -.389999986, y: .689999998}
+      - {x: -.479999989, y: .689999998}
+      - {x: -.660000026, y: .469999999}
+      - {x: -.660000026, y: .430000007}
+      - {x: -.389999986, y: .0900000036}
+      - {x: -.409999996, y: -.0700000003}
+      - {x: -.379999995, y: -.230000004}
+      - {x: -.589999974, y: -.379999995}
+      - {x: -.720000029, y: -.550000012}
+      - {x: -.730000019, y: -.579999983}
+      - {x: -.730000019, y: -.689999998}
+      - {x: -.589999974, y: -.689999998}
+      - {x: -.319999993, y: -.629999995}
+      - {x: -.119999997, y: -.639999986}
+      - {x: .00999999978, y: -.560000002}
 --- !u!114 &11440700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25921384c47e1471784567b36b689eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .0500000007
+  moveSpeed: 5
   point: 10
   isPointItem: 0
 --- !u!212 &21224216
@@ -97,8 +127,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea327725bbbd84ffbb774c4da58a4302, type: 3}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300008, guid: 6842bc5aee27f4c3d95740f35163807a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

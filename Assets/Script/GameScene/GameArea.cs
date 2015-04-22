@@ -1,16 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameArea : MonoBehaviour {
 
     //  ゲーム終了フラグ
     public bool isGameEnd = false;
+    //  確率の配列
+    public float[] itemProbs;
 
-    public GameObject _pointItem;
-    public GameObject _poisonItem;
-    public GameObject _bird;
+    private const int BIRD_INDEX = 4;
 
-    private Vector3 _itemPosition;
+    public List<GameObject> itemList;
 
     void Awake(){
         const float delayTime = 2.0f;
@@ -19,7 +20,6 @@ public class GameArea : MonoBehaviour {
 
     void Start(){
         AudioManager.Instance.playBgm ("Stage");
-        _itemPosition = new Vector3 (-8.1f, -3.7f, 0);
     }
    
     void Update(){
@@ -32,15 +32,36 @@ public class GameArea : MonoBehaviour {
 
     void createItem(){
         GameObject item;
-        if (0 == Random.Range (0, 100) % 3) {
-            item = (GameObject)Instantiate (_pointItem, _itemPosition, Quaternion.identity);
-        } else if (1 == Random.Range (0, 100) % 3) {
-            item = (GameObject)Instantiate (_poisonItem, _itemPosition, Quaternion.identity);
+        float arrayIndex = chooseItem (itemProbs);
+
+        Vector3 itemPosition;
+        if (BIRD_INDEX == arrayIndex) {
+            itemPosition = new Vector3 (-8.1f, -1.5f, 0);
         } else {
-            Vector3 birdPos = new Vector3 (-8.1f, -0.31f, 0);
-            item = (GameObject)Instantiate (_bird, birdPos, Quaternion.identity);
+            itemPosition = new Vector3 (-8.1f, -4f, 0);
         }
+        item = (GameObject)Instantiate (itemList [(int)arrayIndex], itemPosition, Quaternion.identity);
         item.transform.SetParent (transform);
+    }
+
+    float chooseItem(float[] values){
+        float total = 0;
+
+        foreach (float elem in values) {
+            total += elem;
+        }
+
+        float randomPoint = Random.value * total;
+
+        for (int i = 0; i < values.Length; i++) {
+            if (randomPoint < values [i]) {
+                return i;
+            } else {
+                randomPoint -= values [i];
+            }
+        }
+
+        return values.Length - 1;
     }
 
     public void switchGameOver(){

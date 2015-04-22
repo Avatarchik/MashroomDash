@@ -48,7 +48,8 @@ public class MainUI : MonoBehaviour {
     }
 
     public void OnTapTwitterButton(){
-        string text = "きのこたくさんとれたゾ！\nすこあ：" + _resultScore.ToString ();
-        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(text + "\n#きのこの!"));
+        string text = "きのこたくさんとれたゾ！\nすこあ：" + _resultScore.ToString () + "\n";
+        string url = "https://play.google.com/store/apps/details?id=com.konvalo";
+        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(text + url + "\n#きのこの!"));
     }
 }
