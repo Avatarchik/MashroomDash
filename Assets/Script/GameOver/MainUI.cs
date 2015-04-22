@@ -52,4 +52,8 @@ public class MainUI : MonoBehaviour {
         string url = "https://play.google.com/store/apps/details?id=com.konvalo";
         Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(text + url + "\n#きのこの!"));
     }
+
+	public void OnTapTitleButton(){
+		SceneManager.Instance.loadLevel ("TitleScene", 0.5f);
+	}
 }
