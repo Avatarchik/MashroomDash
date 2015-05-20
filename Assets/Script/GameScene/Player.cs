@@ -19,17 +19,14 @@ public class Player : MonoBehaviour {
     }
 
     void Start(){
-
     }
 
-	void Update () {
-        if (Input.GetMouseButtonUp (0)) {
-            if (JUMP_LIMIT > jumpCount) {
-                jumpCount++;
-                GetComponent<Rigidbody2D>().AddForce (Vector2.up * 700);
-            }
+    public void jumpPlayer(){
+        if (JUMP_LIMIT > jumpCount) {
+            jumpCount++;
+            GetComponent<Rigidbody2D>().AddForce (Vector2.up * 700);
         }
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D col){
         if ("poisonItem" == col.tag) {

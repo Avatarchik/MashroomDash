@@ -13,14 +13,31 @@ public class GameArea : MonoBehaviour {
     //  生成するアイテム
     public List<GameObject> itemList;
 
+    private Player _player;
+
+    private bool _isPause;
+
     void Awake(){
         // 2秒毎にアイテム生成 
         const float delayTime = 2.0f;
         InvokeRepeating ("createItem", delayTime, delayTime);
+        _isPause = false;
     }
 
     void Start(){
         AudioManager.Instance.playBgm ("Stage");
+        _player = GetComponentInChildren<Player> ();
+    }
+
+    void Update () {
+        if (Input.GetMouseButtonUp (0)) {
+            //  タッチ座標がGameAreaのCollider内だったらジャンプする
+            Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D collider = Physics2D.OverlapPoint(touchPos);
+            if (collider) {
+                _player.jumpPlayer ();
+            }
+        }
     }
         
     //  画面外判定
@@ -69,5 +86,23 @@ public class GameArea : MonoBehaviour {
         isGameEnd = true;
         FindObjectOfType<Score> ().saveScore ();
         Application.LoadLevel ("GameOverScene");
+    }
+
+    public void onTapPauseButton(){
+        if (_isPause) {
+            _isPause = false;
+            resumeGame ();
+        } else {
+            _isPause = true;
+            pauseGame ();
+        }
+    }
+
+    void pauseGame(){
+        Time.timeScale = 0;
+    }
+
+    void resumeGame(){
+        Time.timeScale = 1;
     }
 }
