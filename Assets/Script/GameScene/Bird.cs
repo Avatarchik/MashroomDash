@@ -9,7 +9,11 @@ public class Bird : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        //  カットインの再生回数に合わせてスピードを調整
+        CutInManager manager = GetComponentInParent<CutInManager> ();
+        for (int i = 0; i < manager.getCutInFase () - 1; i++) {
+            moveSpeed *= manager.getSpeedRate();
+        }
     }
 
     // Update is called once per frame
@@ -17,9 +21,5 @@ public class Bird : MonoBehaviour {
         if (0 < Time.timeScale) {
             transform.Translate (Vector3.right * Time.deltaTime * moveSpeed);
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D col){
-
     }
 }

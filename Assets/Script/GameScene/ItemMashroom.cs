@@ -2,14 +2,25 @@
 using System.Collections;
 
 public class ItemMashroom : MonoBehaviour {
-
-    public float moveSpeed = 0.2f;
+    //  アイテムの移動スピード
+    public float moveSpeed;
+    //  獲得ポイント
     public int point = 10;
+    //  加点アイテムかどうか
     public bool isPointItem;
+
+    //  スコアコンポーネント
+    private Score _score;
 
 	// Use this for initialization
 	void Start () {
+        _score = FindObjectOfType<Score> ();
 
+        //  カットインの再生回数に合わせてスピードを調整
+        CutInManager manager = GetComponentInParent<CutInManager> ();
+        for (int i = 0; i < manager.getCutInFase () - 1; i++) {
+            moveSpeed *= manager.getSpeedRate();
+        }
 	}
 	
 	// Update is called once per frame
@@ -24,7 +35,7 @@ public class ItemMashroom : MonoBehaviour {
             if (col.tag == "Player") {
                 AudioManager.Instance.playSe ("ItemGet");
                 Destroy (gameObject);
-                FindObjectOfType<Score>().addPoint(point);
+                _score.addPoint(point);
             }
         }
     }

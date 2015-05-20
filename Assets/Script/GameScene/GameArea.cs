@@ -8,12 +8,13 @@ public class GameArea : MonoBehaviour {
     public bool isGameEnd = false;
     //  確率の配列
     public float[] itemProbs;
-
+    //  鳥の配列要素番号
     private const int BIRD_INDEX = 4;
-
+    //  生成するアイテム
     public List<GameObject> itemList;
 
     void Awake(){
+        // 2秒毎にアイテム生成 
         const float delayTime = 2.0f;
         InvokeRepeating ("createItem", delayTime, delayTime);
     }
@@ -21,15 +22,13 @@ public class GameArea : MonoBehaviour {
     void Start(){
         AudioManager.Instance.playBgm ("Stage");
     }
-   
-    void Update(){
-
-    }
-
+        
+    //  画面外判定
     void OnTriggerExit2D(Collider2D collider){ 
         Destroy (collider.gameObject);
     }
 
+    //  アイテムを生成
     void createItem(){
         GameObject item;
         float arrayIndex = chooseItem (itemProbs);
@@ -44,13 +43,15 @@ public class GameArea : MonoBehaviour {
         item.transform.SetParent (transform);
     }
 
+    //  生成するアイテムを抽選
     float chooseItem(float[] values){
         float total = 0;
 
+        //  配列の要素の黄経を求める
         foreach (float elem in values) {
             total += elem;
         }
-
+            
         float randomPoint = Random.value * total;
 
         for (int i = 0; i < values.Length; i++) {
@@ -60,10 +61,10 @@ public class GameArea : MonoBehaviour {
                 randomPoint -= values [i];
             }
         }
-
         return values.Length - 1;
     }
 
+    //  ゲームオーバー画面へ
     public void switchGameOver(){
         isGameEnd = true;
         FindObjectOfType<Score> ().saveScore ();

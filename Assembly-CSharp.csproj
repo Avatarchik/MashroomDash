@@ -50,8 +50,9 @@
      <Compile Include="Assets\Script\GameOver\MainUI.cs" />
      <Compile Include="Assets\Script\GameScene\BackGround.cs" />
      <Compile Include="Assets\Script\GameScene\Bird.cs" />
+     <Compile Include="Assets\Script\GameScene\CutIn.cs" />
+     <Compile Include="Assets\Script\GameScene\CutInManager.cs" />
      <Compile Include="Assets\Script\GameScene\GameArea.cs" />
-     <Compile Include="Assets\Script\GameScene\GameOver.cs" />
      <Compile Include="Assets\Script\GameScene\ItemMashroom.cs" />
      <Compile Include="Assets\Script\GameScene\Player.cs" />
      <Compile Include="Assets\Script\GameScene\Score.cs" />

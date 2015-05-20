@@ -57,3 +57,6 @@ TagManager:
   - name: gameOver
     uniqueID: 4055112113
     locked: 0
+  - name: illust
+    uniqueID: 61549913
+    locked: 0

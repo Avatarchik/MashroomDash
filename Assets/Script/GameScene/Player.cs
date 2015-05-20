@@ -42,7 +42,6 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col){
         if ("Floor" == col.gameObject.tag) {
-            Debug.Log ("RESET");
             jumpCount = 0;
         }
     }
