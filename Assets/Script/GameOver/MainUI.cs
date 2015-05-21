@@ -54,6 +54,6 @@ public class MainUI : MonoBehaviour {
     }
 
 	public void OnTapTitleButton(){
-		SceneManager.Instance.loadLevel ("TitleScene", 0.5f);
+        SceneManager.Instance.loadLevel ("TitleScene", 0.5f);
 	}
 }

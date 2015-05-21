@@ -17,7 +17,7 @@ public class CutIn : MonoBehaviour {
     //  生成するイラスト
     private GameObject _illust;
     private SpriteRenderer _illustRender;
-    private const float _defaultPos = -14.5f;
+    private Vector3 _defaultPos = new Vector3(-14.5f, 1.27f, 0);
 
     // Use this for initialization
     void Start () {
@@ -31,12 +31,13 @@ public class CutIn : MonoBehaviour {
 
         //  スライドするイラストを作成
         int index = score.getScore() / score.getExtendPoint() - 1;
-        _illust = (GameObject)Instantiate (_illustList[index], new Vector3(_defaultPos, 0, 0), Quaternion.identity);
+        _illust = (GameObject)Instantiate (_illustList[index], _defaultPos, Quaternion.identity);
         _illust.transform.SetParent (gameObject.transform);
         _illustRender = _illust.GetComponent<SpriteRenderer> ();
 
         //  スライドを開始
-        iTween.MoveTo (_illust.gameObject, new Vector3 (4.3f, 0, 0), _fadeTime * 1.5f);
+        float movePos = 2.0f;
+        iTween.MoveTo (_illust.gameObject, new Vector3 (movePos, _defaultPos.y, 0), _fadeTime * 1.5f);
     }
         
     void onUpdate(float value){
@@ -54,7 +55,7 @@ public class CutIn : MonoBehaviour {
         if (value == 1.0f && _isFadeIn) {
             _isFadeIn = false;
             iTween.ValueTo (gameObject, iTween.Hash ("delay", _interval, "from", 1, "to", 0, "time", _fadeTime, "onUpdate", "onUpdate"));
-            iTween.MoveTo (_illust.gameObject, iTween.Hash("x", _defaultPos * -1, "time", _fadeTime * 1.5f, "delay", _interval));
+            iTween.MoveTo (_illust.gameObject, iTween.Hash("x", _defaultPos.x * -1, "time", _fadeTime * 1.5f, "delay", _interval));
         }
 
         //  フェードアウト完了

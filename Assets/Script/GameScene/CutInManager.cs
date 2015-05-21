@@ -25,7 +25,7 @@ public class CutInManager : MonoBehaviour {
     public void playCutIn(){
         //  カットインは3回まで再生
         if (_cutInFase <= CUTIN_LIMIT) {
-            GameObject cutIn = (GameObject)Instantiate (_cutIn, new Vector3 (0, 0, 0), Quaternion.identity);
+            GameObject cutIn = (GameObject)Instantiate (_cutIn, new Vector3 (0, 1.27f, 0), Quaternion.identity);
             cutIn.transform.SetParent (gameObject.transform);
 
             //  背景スクロールスピードアップ

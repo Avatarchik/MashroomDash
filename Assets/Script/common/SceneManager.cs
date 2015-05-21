@@ -11,7 +11,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager> {
 
 	new public void Awake(){
 		if (this != Instance) {
-			Destroy (this);
+            Destroy (this.gameObject);
 			return;
 		}
 

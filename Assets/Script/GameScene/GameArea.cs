@@ -5,23 +5,27 @@ using System.Collections.Generic;
 public class GameArea : MonoBehaviour {
 
     //  ゲーム終了フラグ
-    public bool isGameEnd = false;
+    public bool _isGameEnd = false;
     //  確率の配列
-    public float[] itemProbs;
+    public float[] _itemProbs;
     //  鳥の配列要素番号
     private const int BIRD_INDEX = 4;
-    //  生成するアイテム
-    public List<GameObject> itemList;
 
+    //  生成するアイテム
+    public List<GameObject> _itemList;
+
+    //  プレイヤーオブジェクト
     private Player _player;
 
-    private bool _isPause;
+    //  一時停止メニュー
+    private GameObject _pauseMenu;
 
     void Awake(){
         // 2秒毎にアイテム生成 
         const float delayTime = 2.0f;
         InvokeRepeating ("createItem", delayTime, delayTime);
-        _isPause = false;
+        _pauseMenu = GameObject.Find ("PauseMenu");
+        _pauseMenu.SetActive (false);
     }
 
     void Start(){
@@ -30,7 +34,7 @@ public class GameArea : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetMouseButtonUp (0)) {
+        if (Input.GetMouseButtonUp (0) && Time.timeScale > 0) {
             //  タッチ座標がGameAreaのCollider内だったらジャンプする
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D collider = Physics2D.OverlapPoint(touchPos);
@@ -48,15 +52,15 @@ public class GameArea : MonoBehaviour {
     //  アイテムを生成
     void createItem(){
         GameObject item;
-        float arrayIndex = chooseItem (itemProbs);
+        float arrayIndex = chooseItem (_itemProbs);
 
         Vector3 itemPosition;
         if (BIRD_INDEX == arrayIndex) {
             itemPosition = new Vector3 (-8.1f, -1.5f, 0);
         } else {
-            itemPosition = new Vector3 (-8.1f, -4f, 0);
+            itemPosition = new Vector3 (-8.1f, -3.9f, 0);
         }
-        item = (GameObject)Instantiate (itemList [(int)arrayIndex], itemPosition, Quaternion.identity);
+        item = (GameObject)Instantiate (_itemList [(int)arrayIndex], itemPosition, Quaternion.identity);
         item.transform.SetParent (transform);
     }
 
@@ -83,26 +87,24 @@ public class GameArea : MonoBehaviour {
 
     //  ゲームオーバー画面へ
     public void switchGameOver(){
-        isGameEnd = true;
+        _isGameEnd = true;
         FindObjectOfType<Score> ().saveScore ();
         Application.LoadLevel ("GameOverScene");
     }
 
     public void onTapPauseButton(){
-        if (_isPause) {
-            _isPause = false;
-            resumeGame ();
-        } else {
-            _isPause = true;
-            pauseGame ();
-        }
-    }
-
-    void pauseGame(){
         Time.timeScale = 0;
+        _pauseMenu.SetActive (true);
     }
 
-    void resumeGame(){
+    public void onTapResumeButton(){
         Time.timeScale = 1;
+        _pauseMenu.SetActive (false);
+    }
+
+    public void onTapTitleButton(){
+        //  一時停止を解除してからタイトル画面へ
+        Time.timeScale = 1;
+        Application.LoadLevel ("TitleScene");
     }
 }

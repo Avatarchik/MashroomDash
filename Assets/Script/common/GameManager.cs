@@ -12,7 +12,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager> {
 
     new public void Awake(){
         if (this != Instance) {
-            Destroy (this);
+            Destroy (this.gameObject);
             return;
         }
         DontDestroyOnLoad (gameObject);

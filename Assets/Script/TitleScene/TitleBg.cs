@@ -15,7 +15,8 @@ public class TitleBg : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonUp (0)) {
-			SceneManager.Instance.loadLevel ("GameScene", 0.5f);
+            Debug.Log ("ゲームへ");
+            SceneManager.Instance.loadLevel ("GameScene", 0.5f);
 		}
 	}
 }
